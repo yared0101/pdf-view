@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import PDFViewer from "./Components/PDFViewer";
+// import PDFViewer from "./Components/PDFViewer";
 import PDF from "./document.pdf";
-// import PdfViewOnly from "@yaredt/react-pdf-view";
+import PdfViewOnly from "@yaredt/react-pdf-view";
 function App() {
     const handlePdfInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         console.log("File Inputted");
@@ -25,8 +25,8 @@ function App() {
                 accept=".pdf"
                 className="file-input"
             />
-            <PDFViewer PDF={pdfFile || PDF} />
-            {/* <PdfViewOnly PDF={pdfFile || PDF} /> */}
+            {/* <PDFViewer PDF={pdfFile || PDF} /> */}
+            <PdfViewOnly PDF={pdfFile || PDF} />
         </div>
     );
 }
